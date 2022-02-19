@@ -76,9 +76,18 @@ body {
         border: 1px solid $Desaturated-Red;
         border-radius: 50px;
         outline: none;
+        color: $Dark-Grayish-Red;
         &::placeholder {
           color: $Desaturated-Red;
         }
+      }
+      .error-text {
+        position: absolute;
+        display: none;
+        padding: 5px 20px;
+        font-size: 0.8rem;
+        text-align: left;
+        color: $Soft-Red;
       }
       .btn {
         position: absolute;
@@ -99,6 +108,11 @@ body {
         input {
           border-color: $Soft-Red;
         }
+
+        .error-text {
+          display: block;
+        }
+
         &::after {
           content: '';
           position: absolute;
@@ -169,6 +183,17 @@ body {
       p {
         font-size: 1rem;
         line-height: 1.5;
+      }
+      .email {
+        .btn {
+          width: 100px;
+        }
+
+        &.error {
+          &::after {
+            right: 105px;
+          }
+        }
       }
     }
   }

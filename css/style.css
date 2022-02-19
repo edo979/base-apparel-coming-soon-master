@@ -73,6 +73,7 @@ body {
   border: 1px solid #ce9797;
   border-radius: 50px;
   outline: none;
+  color: #413a3a;
 }
 
 .card #content .email input::-webkit-input-placeholder {
@@ -89,6 +90,15 @@ body {
 
 .card #content .email input::placeholder {
   color: #ce9797;
+}
+
+.card #content .email .error-text {
+  position: absolute;
+  display: none;
+  padding: 5px 20px;
+  font-size: 0.8rem;
+  text-align: left;
+  color: #f96262;
 }
 
 .card #content .email .btn {
@@ -110,6 +120,10 @@ body {
 
 .card #content .email.error input {
   border-color: #f96262;
+}
+
+.card #content .email.error .error-text {
+  display: block;
 }
 
 .card #content .email.error::after {
@@ -190,5 +204,11 @@ body {
   .card #content p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+  .card #content .email .btn {
+    width: 100px;
+  }
+  .card #content .email.error::after {
+    right: 105px;
   }
 }
