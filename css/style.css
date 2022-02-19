@@ -12,10 +12,16 @@ body {
   place-items: center;
   min-height: 100vh;
   font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(135deg, white, #fff5f5), linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  color: #ce9797;
 }
 
 .card {
   max-width: 350px;
+}
+
+.card .container {
+  margin: 30px;
 }
 
 .card #hero-image {
@@ -25,6 +31,71 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  margin-bottom: 35px;
+}
+
+.card #content {
+  text-align: center;
+}
+
+.card #content h1 {
+  padding: 0 20px;
+  margin-bottom: 25px;
+  font-size: 2.3rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #413a3a;
+}
+
+.card #content h1 span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.card #content p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.card #content .email {
+  position: relative;
+  margin: 40px 0;
+}
+
+.card #content .email input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ce9797;
+  border-radius: 50px;
+}
+
+.card #content .email input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.card #content .email input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.card #content .email input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.card #content .email input::placeholder {
+  color: #ce9797;
+}
+
+.card #content .email .btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 100%;
+  width: 65px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
 }
 
 @media (min-width: 900px) {
