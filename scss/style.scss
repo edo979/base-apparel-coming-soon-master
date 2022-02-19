@@ -1,0 +1,61 @@
+//### Primary
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+
+//### Neutral
+
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+//### Gradients
+// Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+$medium: 900px;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.card {
+  max-width: 350px;
+
+  #hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (min-width: $medium) {
+  .card {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'logo hero'
+      'main hero';
+
+    #logo {
+      grid-area: logo;
+    }
+    #hero-image {
+      grid-area: hero;
+    }
+    #content {
+      grid-area: main;
+    }
+  }
+}
