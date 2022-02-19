@@ -64,6 +64,7 @@ body {
 .card #content .email {
   position: relative;
   margin: 40px 0;
+  z-index: 1;
 }
 
 .card #content .email input {
@@ -105,6 +106,21 @@ body {
 
 .card #content .email .btn:active {
   opacity: 0.7;
+}
+
+.card #content .email.error input {
+  border-color: #f96262;
+}
+
+.card #content .email.error::after {
+  content: '';
+  position: absolute;
+  right: 70px;
+  bottom: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon-error.svg");
+  z-index: 1;
 }
 
 @media (min-width: 1180px) {
