@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.card {
+  max-width: 350px;
+}
+
+.card #hero-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 900px) {
+  .card {
+    max-width: 1440px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'logo hero' 'main hero';
+  }
+  .card #logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  .card #hero-image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: hero;
+  }
+  .card #content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: main;
+  }
+}
